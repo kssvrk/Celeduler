@@ -11,7 +11,7 @@ django.setup()
 #-------------
 app = Celery('asyncprocessing')
 app.config_from_object('celeryconfig')
-jobs_config={}
+
  
 
 #------------------------ give the jobs here --------------------
@@ -26,4 +26,3 @@ def addition(argument_file):
             return add(data['number1'],data['number2'])
     except:
         print('Exception occured while processing the task.')
-jobs_config={'addition':addition}
