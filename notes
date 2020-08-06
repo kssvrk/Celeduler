@@ -1,0 +1,2 @@
+#celery worker node based queue
+celery -A tasks worker -Q node_1
